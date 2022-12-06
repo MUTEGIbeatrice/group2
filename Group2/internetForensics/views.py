@@ -7,19 +7,19 @@ from django.http import HttpResponse
 # Create your views here.
  
 def login(request):
-    return HttpResponse('Login page')
+    return render(request, 'internetForensics/login.html')
 
-def dashboard(request):
-    return HttpResponse('Dashboard page')
+def mainpage(request):
+    return render(request, 'internetForensics/mainpage.html')
     
 def reports(request): #report management
-    return HttpResponse('Reports page')
+    return render(request, 'internetForensics/reports.html')
 
 def criminalActivity(request): #search and locate criminal activities
-    return HttpResponse('Criminal Activity page')
+    return render(request, 'internetForensics/criminalactivity.html')
 
 def audits(request): #manage audits
-    return HttpResponse('Audits page')   
+    return render(request, 'internetForensics/audits.html')   
 
 def cases(request): #manage cases
-    return HttpResponse('Cases page')
+    return render(request, 'internetForensics/cases.html')
