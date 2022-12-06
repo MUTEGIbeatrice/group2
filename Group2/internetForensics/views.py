@@ -1,9 +1,5 @@
 from django.shortcuts import render
 
-"set Http Response for all the web pages available and to be accessed in the system"
-from django.http import HttpResponse 
-
-
 # Create your views here.
  
 def login(request):

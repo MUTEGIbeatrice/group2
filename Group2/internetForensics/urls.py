@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views #importing from views.py file 
 
-#importing the url path (html responses) from views.py file 
+#importing the url path from views.py file 
 urlpatterns = [
 
     path('', views.login),
