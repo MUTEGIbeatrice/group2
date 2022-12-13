@@ -1,121 +1,260 @@
+<!--NAVIGATION BAR HTML AND CSS TO MINIMIZE REDUNDANCY TO OTHER PAGES-->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
   <title> Navigation Bar </title>
-  <link rel="stylesheet" href="style.css">
+ 
 
-<!--Stylesheet css-->
+<!--Stylesheet CSS-->
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Ubuntu", sans-serif;
-  }
-  nav {
-    position: fixed;
-    top: 0;
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+.fa-2x {
+  font-size: 2em;
+}
+.fa {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.main-menu:hover,
+nav.main-menu.expanded {
+  width: 250px;
+  overflow: visible;
+}
+
+.main-menu {
+  background: #212121;
+  border-right: 1px solid #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 60px;
+  overflow: hidden;
+  -webkit-transition: width 0.05s linear;
+  transition: width 0.05s linear;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  z-index: 1000;
+}
+
+.main-menu > ul {
+  margin: 7px 0;
+}
+
+.main-menu li {
+  position: relative;
+  display: block;
+  width: 250px;
+}
+
+.main-menu li > a {
+  position: relative;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #999;
+  font-family: arial;
+  font-size: 14px;
+  text-decoration: none;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.main-menu .nav-icon {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.main-menu .nav-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 190px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.main-menu > ul.admin {
+    position: absolute;
     left: 0;
-    width: 100%;
-    padding: 20px;
-    transition: all 0.4s ease;
+    bottom: 0;
   }
-  nav.sticky {
-    padding: 15px 20px;
-    background: #af8c44;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  }
-  nav .nav-content {
-    height: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  nav .logo a {
-    font-weight: 500;
-    font-size: 35px;
-    color: #353842;
-  }
-  nav.sticky .logo a {
-    color: #fff;
-  }
+
+.main-menu > ul.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+  overflow: visible;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+nav ul,
+nav li {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+.main-menu li:hover > a,
+nav.main-menu li.active > a,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+.dashboard-page nav.dashboard-menu ul li.active a {
+  color: #fff;
+  background-color: rgb(96, 144, 147);
+}
+.area {
+  float: left;
+  background: #e2e2e2;
+  width: 100%;
+  height: 100%;
   
-  .nav-content .nav-links {
-    display: flex;
-  }
-  
-  .nav-content .nav-links li {
-    list-style: none;
-    margin: 0 8px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #0e2431;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 4px;
-    transition: all 0.3 ease;
-  }
-  
-  .nav-links li a:hover {
-    color: #fecd03;
-  }
-  
-  .nav.sticky .nav-links li a {
-    color: #fff;
-    transition: all 0.4 ease;
-  }
-  
-  .nav.sticky .nav-links li a:hover {
-    color: #0e2431;
-  }
-  
-  .home {
-    height: 100vh;
-    width: 100%;
-    background-image: url("images/background.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  
-  h2 {
-    font-size: 30px;
-    margin-bottom: 6px;
-    color: #fecd03;
-  }
-  
-  .text {
-    text-align: justify;
-    padding: 40px 80px;
-    box-sizing: -5px 0 10px rgba(0, 0, 0, 0.1);
-    line-height: 27px;
-  }
+}
+@font-face {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Titillium WebLight"), local("TitilliumWeb-Light"),
+    url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff)
+      format("woff");
+}
+
 </style>  
 </head>
 
 <body>
-  <nav>
-    <div class="nav-content">
-      <div class="logo">
-        <a href="#">Welcome</a>
-      </div>
+  <div class="area"></div>
+  <nav class="main-menu">
+    <ul>
+      <li>
+          <i class="fa fa-user fa-4x"></i>
+          <span class="nav-text">
+           <b>Welcome, User</b></br> 
+          </span>
+        </a>
 
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Criminal activities</a></li>
-        <li><a href="#">Cases</a></li>
-        <li><a href="#">Audits</a></li>
-        <li><a href="#">Reports</a></li>
-        <li><a href="#">Home</a></li>
-      </ul>
-    </div>
+      </li>
+      <li class="has-subnav">
+        <a href="Group2\internetForensics\templates\internetForensics\mainpage.html">
+          <i class="fa fa-home fa-2x"></i>
+          <span class="nav-text">
+            Dashboard
+          </span>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a href="#">
+          <i class="fa fa-list fa-2x"></i>
+          <span class="nav-text">
+            Forms
+          </span>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a href="Group2\internetForensics\templates\internetForensics\cases.html">
+          <i class="fa fa-folder-open fa-2x"></i>
+          <span class="nav-text">
+            Cases
+          </span>
+        </a>
+
+      </li>
+      <li>
+        <a href="Group2\internetForensics\templates\internetForensics\reports.html">
+          <i class="fa fa-bar-chart-o fa-2x"></i>
+          <span class="nav-text">
+            Reports
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="Group2\internetForensics\templates\internetForensics\audits.html">
+          <i class="fa fa-font fa-2x"></i>
+          <span class="nav-text">
+           Audits
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-table fa-2x"></i>
+          <span class="nav-text">
+            Tables
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="Group2\internetForensics\templates\internetForensics\criminalactivity.html">
+          <i class="fa fa-map-marker fa-2x"></i>
+          <span class="nav-text">
+            Search and Locate Criminal Activities
+          </span>
+        </a>
+      </li>
+      <li>
+    </ul>
+    <ul class="admin">
+      <li>
+        <a href="admin.html">
+          <i class="fa fa-cog fa-2x"></i>
+          <span class="nav-text">
+            Administrator Page
+          </span>
+        </a>
+      </li>
+
+    <ul class="logout">
+      <li>
+        <a href="Group2\internetForensics\templates\internetForensics\index.html">
+          <i class="fa fa-power-off fa-2x"></i>
+          <span class="nav-text">
+            Logout
+          </span>
+        </a>
+      </li>
+    </ul>
   </nav>
   </body>
   </html>

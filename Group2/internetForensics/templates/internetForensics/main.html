@@ -1,4 +1,32 @@
-   {% include 'internetForensics/navbar.html' %} <!-- inheritance of files -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Dutch Police Internet Forensics Systems </title>
+
+  
+<!--Stylesheet CSS-->
+  <style>
+body{
+    background-color: #b5b5b5;
+}
+
+.col{
+    
+    padding:10px;
+ 
+    background-color: rgb(96, 144, 147);
+    text-align: center;
+}
+
+
+</style>
+
+</head>
+  <body>
+   
+        {% include 'internetForensics/navbar.html' %} <!-- inheritance of files -->
 
     {% block content %}
 
@@ -8,7 +36,7 @@
 
     <hr>
 
-    <h5> our Footer </h5>
+    <h5> <center> &copy; <script>document.write(new Date().getFullYear())</script>. All rights reserved.</center> </h5>
 
 </body>
 </html>

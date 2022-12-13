@@ -1,9 +1,11 @@
+from django.shortcuts import render, redirect
 from django.shortcuts import render
 
 # Create your views here.
+
  
-def login(request):
-    return render(request, 'internetForensics/login.html')
+def index(request):
+    return render(request, 'internetForensics/index.html')
 
 def mainpage(request):
     return render(request, 'internetForensics/mainpage.html')
