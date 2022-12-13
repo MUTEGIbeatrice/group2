@@ -1,4 +1,4 @@
-<!--NAVIGATION BAR HTML AND CSS TO MINIMIZE REDUNDANCY TO OTHER PAGES-->
+<!--NAVIGATION BAR HTML AND CSS TO MINIMIZE CODE REDUNDANCY WHEN CREATING OTHER PAGES-->
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -175,10 +175,10 @@ nav.main-menu li.active > a,
 
       </li>
       <li class="has-subnav">
-        <a href="Group2\internetForensics\templates\internetForensics\mainpage.html">
+        <a href="{% url 'mainpage' %}">
           <i class="fa fa-home fa-2x"></i>
           <span class="nav-text">
-            Dashboard
+            User Dashboard
           </span>
         </a>
 
@@ -193,7 +193,7 @@ nav.main-menu li.active > a,
 
       </li>
       <li class="has-subnav">
-        <a href="Group2\internetForensics\templates\internetForensics\cases.html">
+        <a href="{% url 'cases' %}">
           <i class="fa fa-folder-open fa-2x"></i>
           <span class="nav-text">
             Cases
@@ -202,7 +202,7 @@ nav.main-menu li.active > a,
 
       </li>
       <li>
-        <a href="Group2\internetForensics\templates\internetForensics\reports.html">
+        <a href="{% url 'reports' %}">
           <i class="fa fa-bar-chart-o fa-2x"></i>
           <span class="nav-text">
             Reports
@@ -210,7 +210,7 @@ nav.main-menu li.active > a,
         </a>
       </li>
       <li>
-        <a href="Group2\internetForensics\templates\internetForensics\audits.html">
+        <a href="{% url 'audits' %}">
           <i class="fa fa-font fa-2x"></i>
           <span class="nav-text">
            Audits
@@ -226,7 +226,7 @@ nav.main-menu li.active > a,
         </a>
       </li>
       <li>
-        <a href="Group2\internetForensics\templates\internetForensics\criminalactivity.html">
+        <a href="{% url 'criminalactivity' %}">
           <i class="fa fa-map-marker fa-2x"></i>
           <span class="nav-text">
             Search and Locate Criminal Activities
@@ -237,10 +237,10 @@ nav.main-menu li.active > a,
     </ul>
     <ul class="admin">
       <li>
-        <a href="admin.html">
+        <a href="">
           <i class="fa fa-cog fa-2x"></i>
           <span class="nav-text">
-            Administrator Page
+            Administrator Dashboard
           </span>
         </a>
       </li>
