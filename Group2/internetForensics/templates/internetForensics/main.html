@@ -8,24 +8,65 @@
 
   
 <!--Stylesheet CSS-->
+
   <style>
+
 body{
-    background-color: #b5b5b5;
+  position:relative;
+  background-color: #b5b5b5;
+}
+
+/*CSS FOR HEADER*/
+
+.majorheader{
+  position: relative;
+  display:inline-block;
+  background: rgb(44, 78, 81);
+  width: 100%;   
+  }
+
+h1{
+  text-align: center;
+  font-size: 150;
+  color: rgb(188, 188, 188);
+}
+
+h2{
+  text-align: center;
+  font-size: 300;
+  color: rgb(118, 116, 116);
 }
 
 .col{
-    
     padding:10px;
- 
     background-color: rgb(96, 144, 147);
     text-align: center;
+}
+
+/* CSS FOR FOOTER */
+.majorfooter{
+  position:block;
+  background: rgb(44, 78, 81);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1px;
+  text-align: center;
+  color: #b5b5b5;
 }
 
 
 </style>
 
 </head>
+
   <body>
+
+    <div class="majorheader">
+    <h2> Dutch Police Internet Forensics Systems </h2>
+  </div>
+
+</hr>
    
         {% include 'internetForensics/navbar.html' %} <!-- inheritance of files -->
 
@@ -35,9 +76,10 @@ body{
 
     {% endblock %}
 
-    <hr>
-
-    <h5> <center> &copy; <script>document.write(new Date().getFullYear())</script>. All rights reserved.</center> </h5>
+    
+<div class="majorfooter">
+   <p> &copy; <script>document.write(new Date().getFullYear())</script>. All rights reserved.</p>
+</div>
 
 </body>
 </html>
