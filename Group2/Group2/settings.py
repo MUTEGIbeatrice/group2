@@ -92,6 +92,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+            'OPTIONS': {'min_length': 8,}
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -100,6 +101,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+# So as to keep updating the expiry time with every request
+
+SESSION_SAVE_EVERY_REQUEST = True
+
+PASSWORD_EXPIRE_FORCE = True #to force password change
+
+
+PASSWORD_EXPIRE_EXCLUDE_SUPERUSERS = True #to exclude superusers from the password expiration
+
 
 
 # Internationalization
